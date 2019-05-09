@@ -1,0 +1,54 @@
+print('----------------Calculadora-------------------')
+print('Ingrese el numero de la operación que necesita')
+print('(1) Sumar')
+print('(2) Restar')
+print('(3) Multiplicar')
+print('(4) Dividir')
+print('(5) Para salir')
+
+while True:
+    x = input('==> ')
+    try:
+        x = int(x)
+        #SUMA
+        if 1 <= x <= 5:
+            if x == 1:
+                print('Haz selecionado sumar')
+                a = int(input('Ingresa el primer número: '))
+                b = int(input('Ingresa el segundo numero: '))
+                sumar = a + b
+                print(f'La suma es: {sumar}')
+            #RESTA
+            elif x == 2:
+                print('Haz selecionado restar')
+                a = int(input('Ingresa el primer número: '))
+                b = int(input('Ingresa el segundo numero: '))
+                resta = a - b
+                print(f'La resta es: {resta}')
+            #Multiplicar
+            elif x == 3:
+                print('Haz selecionado multiplicar')
+                a = int(input('Ingresa el primer número: '))
+                b = int(input('Ingresa el segundo numero: '))
+                multiplicacion = a * b
+                print(f'La multiplicación es: {multiplicacion}')
+            #Dividir
+            elif x == 4:
+                print('Haz selecionado dividir')
+                a = int(input('Ingresa el primer número: '))
+                b = int(input('Ingresa el segundo numero: '))
+                if a or b == 0:
+                    print('Operación indefinida')
+                division = a / b
+                print(f'La división es: {division}')
+            #Dato erroneo
+            elif x < 0 or x > 5:
+                print('(ERROR) INGRESA DEL 1 AL 5 PORFAVOR')
+            #Salir    
+            elif x == 5:
+                print('Haz seleccionado salir')
+                exit()
+        else:
+            print('(ERROR) INGRESA DEL 1 AL 5 PORFAVOR')
+    except ValueError:
+        print("chupalo")
