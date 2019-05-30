@@ -1,0 +1,18 @@
+#vicho = [1,2,3,'Hola a todos',5,6,7]
+#print(vicho[3])
+
+#vicho = [2,5,6,8,7,'Hola mundo']
+#vicho.reverse()
+#print(vicho)
+
+
+def nut(n1,n2):
+    if (n1 < n2):        
+        for i in range(n1+1,n2):
+            print(i)
+    else :
+        for i in range(n2+1,n1):
+            print(i)
+a = int(input('ingresa un numero: '))
+b = int(input('ingresa otro numero: '))
+nut(a,b)
